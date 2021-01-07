@@ -1,8 +1,8 @@
 <h1>編集画面</h1>
-<% form_with model: @list, url: "/todolists/#{@list.id}", local: true do |list| %>
+<%= form_with model: @list, url: "/todolists/#{@list.id}", local: true do |f| %>
 <h4>タイトル</h4>
-<%= list.text_field %>
+<%= f.text_field :title %>
 <h4>本文</h4>
-<%= list.text_area %>
-<%= submit "送信" %>
+<%= f.text_area :body %>
+<%= f.submit "保存" %>
 <% end %>
