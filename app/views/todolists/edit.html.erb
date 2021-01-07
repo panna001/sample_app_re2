@@ -1,0 +1,8 @@
+<h1>編集画面</h1>
+<% form_with model: @list, url: "/todolists/#{@list.id}", local: true do |list| %>
+<h4>タイトル</h4>
+<%= list.text_field %>
+<h4>本文</h4>
+<%= list.text_area %>
+<%= submit "送信" %>
+<% end %>
